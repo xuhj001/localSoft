@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <title>富途牛牛</title>
+  <link rel="icon" href="icons/icon32.png">
+  <link rel="stylesheet" href="app.css">
+</head>
+<body class="list-only">
+  <header id="toolbar">
+    <button id="back" title="后退">←</button>
+    <button id="listMode" class="checked">本地</button>
+    <input id="localInput" placeholder="添加本地自选：代码，回车" spellcheck="false" autocomplete="off">
+    <span class="sep"></span>
+    <button id="reload" title="重新加载左右两侧页面（F5）">刷新</button>
+    <button id="auto" class="checked" title="每 3 秒刷新行情、分时图和自选列表；关掉后按 60 秒刷新">3秒刷新</button>
+    <span class="sep"></span>
+    <button id="login">登录</button>
+    <button id="verify" title="用 cookie + quote-token 直接请求自选接口，确认登录态和签名">接口验证</button>
+    <button id="config" title="查看本地自选数据的保存位置">配置</button>
+    <span class="sep"></span>
+    <button id="export" title="把本地自选导出成 JSON 文件。存到项目的 edge_extension\defaults.json 覆盖它，就是可提交到 git 的备份">导出</button>
+    <button id="import" title="从 JSON 文件导入本地自选（整份替换，导入前会确认）">导入</button>
+    <input id="importFile" type="file" accept=".json,application/json" hidden>
+  </header>
+  <main id="main">
+    <div id="left"></div>
+    <div id="splitter"></div>
+    <div id="right">
+      <div id="blank"></div>
+    </div>
+  </main>
+  <div id="configPanel" hidden>
+    <div class="title">本地自选数据位置</div>
+    <div id="configPath"></div>
+    <div class="actions">
+      <button id="configCopy">复制路径</button>
+      <button id="configClose">关闭</button>
+    </div>
+    <div class="note">
+      Edge 的扩展存储（LevelDB 数据库），不能直接编辑。<br>
+      备份：用「导出」存到项目的 edge_extension\defaults.json（可提交到 git）；存储丢失时扩展自动用它恢复，也可以「导入」它。<br>
+      复制后粘贴到资源管理器地址栏即可打开。用的不是默认个人资料时，把 Default 换成
+      edge://version 里「个人资料路径」的最后一段。
+    </div>
+  </div>
+  <footer id="statusbar">
+    <span id="message"></span>
+    <span id="status"></span>
+  </footer>
+  <script src="cookies.js"></script>
+  <script src="quotes.js"></script>
+  <script src="watchlist.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>

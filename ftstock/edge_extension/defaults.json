@@ -1,0 +1,182 @@
+[
+  {
+    "stockId": "70000944",
+    "stockCode": "NQmain",
+    "marketType": 2,
+    "marketLabel": "US",
+    "name": "纳斯达克100指数期货主连",
+    "instrumentType": 9,
+    "subInstrumentType": 9002
+  },
+  {
+    "stockId": "203290",
+    "stockCode": "QQQ",
+    "marketType": 2,
+    "marketLabel": "US",
+    "name": "纳指100ETF-Invesco QQQ Trust",
+    "instrumentType": 4,
+    "subInstrumentType": 4002
+  },
+  {
+    "stockId": "202918",
+    "stockCode": "QLD",
+    "marketType": 2,
+    "marketLabel": "US",
+    "name": "2倍做多纳斯达克100指数ETF-ProShares",
+    "instrumentType": 4,
+    "subInstrumentType": 4002
+  },
+  {
+    "stockId": "70000963",
+    "stockCode": "ESmain",
+    "marketType": 2,
+    "marketLabel": "US",
+    "name": "标普500指数期货主连",
+    "instrumentType": 9,
+    "subInstrumentType": 9002
+  },
+  {
+    "stockId": "202314",
+    "stockCode": "SSO",
+    "marketType": 2,
+    "marketLabel": "US",
+    "name": "2倍做多标普500ETF-ProShares",
+    "instrumentType": 4,
+    "subInstrumentType": 4002
+  },
+  {
+    "stockId": "207686",
+    "stockCode": "SPXL",
+    "marketType": 2,
+    "marketLabel": "US",
+    "name": "三倍做多标普500ETF-Direxion",
+    "instrumentType": 4,
+    "subInstrumentType": 4002
+  },
+  {
+    "stockId": "207016",
+    "stockCode": "SCHD",
+    "marketType": 2,
+    "marketLabel": "US",
+    "name": "美国红利股ETF-Schwab",
+    "instrumentType": 4,
+    "subInstrumentType": 4002
+  },
+  {
+    "stockId": "205189",
+    "stockCode": "AAPL",
+    "marketType": 2,
+    "marketLabel": "US",
+    "name": "苹果",
+    "instrumentType": 3,
+    "subInstrumentType": 3002
+  },
+  {
+    "stockId": "206647",
+    "stockCode": "GOOGL",
+    "marketType": 2,
+    "marketLabel": "US",
+    "name": "谷歌-A",
+    "instrumentType": 3,
+    "subInstrumentType": 3002
+  },
+  {
+    "stockId": "201345",
+    "stockCode": "MSFT",
+    "marketType": 2,
+    "marketLabel": "US",
+    "name": "微软",
+    "instrumentType": 3,
+    "subInstrumentType": 3002
+  },
+  {
+    "stockId": "207605",
+    "stockCode": "SOXX",
+    "marketType": 2,
+    "marketLabel": "US",
+    "name": "半导体ETF-iShares",
+    "instrumentType": 4,
+    "subInstrumentType": 4002
+  },
+  {
+    "stockId": "202597",
+    "stockCode": "NVDA",
+    "marketType": 2,
+    "marketLabel": "US",
+    "name": "英伟达",
+    "instrumentType": 3,
+    "subInstrumentType": 3002
+  },
+  {
+    "stockId": "201335",
+    "stockCode": "TSLA",
+    "marketType": 2,
+    "marketLabel": "US",
+    "name": "特斯拉",
+    "instrumentType": 3,
+    "subInstrumentType": 3002
+  },
+  {
+    "stockId": "201429",
+    "stockCode": "AVGO",
+    "marketType": 2,
+    "marketLabel": "US",
+    "name": "博通",
+    "instrumentType": 3,
+    "subInstrumentType": 3002
+  },
+  {
+    "stockId": "205816",
+    "stockCode": "AMD",
+    "marketType": 2,
+    "marketLabel": "US",
+    "name": "美国超微公司",
+    "instrumentType": 3,
+    "subInstrumentType": 3002
+  },
+  {
+    "stockId": "201926",
+    "stockCode": "INTC",
+    "marketType": 2,
+    "marketLabel": "US",
+    "name": "英特尔",
+    "instrumentType": 3,
+    "subInstrumentType": 3002
+  },
+  {
+    "stockId": "202020",
+    "stockCode": "TSM",
+    "marketType": 2,
+    "marketLabel": "US",
+    "name": "台积电",
+    "instrumentType": 3,
+    "subInstrumentType": 3005
+  },
+  {
+    "stockId": "206117",
+    "stockCode": "MU",
+    "marketType": 2,
+    "marketLabel": "US",
+    "name": "美光科技",
+    "instrumentType": 3,
+    "subInstrumentType": 3002
+  },
+  {
+    "stockId": "86509231477310",
+    "stockCode": "SNDK",
+    "marketType": 2,
+    "marketLabel": "US",
+    "name": "闪迪",
+    "instrumentType": 3,
+    "subInstrumentType": 3002
+  },
+  {
+    "stockId": "206646",
+    "stockCode": "HSBC",
+    "marketType": 2,
+    "marketLabel": "US",
+    "name": "汇丰控股",
+    "instrumentType": 3,
+    "subInstrumentType": 3005
+  }
+]

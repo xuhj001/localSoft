@@ -1,0 +1,122 @@
+* { box-sizing: border-box; }
+
+html, body {
+  margin: 0;
+  height: 100%;
+  overflow: hidden;
+  font: 13px "Microsoft YaHei UI", "Segoe UI", sans-serif;
+  color: #222;
+  background: #f3f3f3;
+}
+
+body { display: flex; flex-direction: column; }
+
+#toolbar {
+  flex: none;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  padding: 4px 6px;
+  border-bottom: 1px solid #d8d8d8;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+#toolbar button {
+  height: 26px;
+  padding: 0 9px;
+  border: 1px solid transparent;
+  border-radius: 4px;
+  background: transparent;
+  font: inherit;
+  color: inherit;
+  cursor: pointer;
+}
+#toolbar button:hover { background: #e2e2e2; border-color: #cfcfcf; }
+#toolbar button.checked { background: #dcdcdc; border-color: #c4c4c4; }
+#toolbar button:disabled { color: #999; cursor: default; }
+
+#toolbar input:not([type]) {
+  height: 26px;
+  padding: 0 6px;
+  border: 1px solid #c8c8c8;
+  border-radius: 4px;
+  font: inherit;
+  background: #fff;
+  outline: none;
+}
+#toolbar input:focus { border-color: #ff7a00; }
+#toolbar input:disabled { background: #eee; }
+#localInput { width: 180px; }
+#toolbar .sep { width: 1px; height: 18px; margin: 0 4px; background: #cfcfcf; }
+
+#main { position: relative; flex: 1 1 auto; display: flex; min-height: 0; background: #fff; }
+
+/* 左侧自选列表按站点弹窗的原始宽度排版；变窄时被右侧遮住，而不是跟着重排 */
+#left { position: relative; flex: none; overflow: hidden; }
+/* 只看列表：盖住整个主区域（右侧详情页留在下面，不卸载） */
+body.list-only #left { position: absolute; inset: 0; z-index: 1; }
+#left iframe { position: absolute; top: 0; left: 0; height: 100%; }
+
+#splitter { flex: none; width: 5px; cursor: col-resize; background: #e6e6e6; }
+#splitter:hover, body.resizing #splitter { background: #ffb36b; }
+body.resizing { cursor: col-resize; user-select: none; }
+body.resizing iframe { pointer-events: none; }
+
+#right { position: relative; flex: 1 1 auto; min-width: 0; }
+#right iframe, #blank { position: absolute; inset: 0; width: 100%; height: 100%; }
+#blank { background: #fff; }
+#right.detail #blank, #right:not(.detail) iframe { visibility: hidden; }
+
+iframe { border: 0; display: block; background: #fff; }
+
+#configPanel {
+  position: fixed;
+  top: 36px;
+  z-index: 10;
+  width: 560px;
+  max-width: calc(100vw - 16px);
+  padding: 10px 12px;
+  border: 1px solid #cfcfcf;
+  border-radius: 6px;
+  background: #fff;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, .15);
+}
+#configPanel .title { margin-bottom: 6px; font-weight: bold; }
+#configPath {
+  padding: 5px 6px;
+  border: 1px solid #c8c8c8;
+  border-radius: 4px;
+  font: 12px/1.5 Consolas, "Microsoft YaHei UI", monospace;
+  background: #f7f7f7;
+  word-break: break-all;
+  user-select: all;
+}
+#configPanel .actions { display: flex; gap: 6px; margin: 8px 0; }
+#configPanel button {
+  height: 26px;
+  padding: 0 12px;
+  border: 1px solid #c8c8c8;
+  border-radius: 4px;
+  background: #f3f3f3;
+  font: inherit;
+  cursor: pointer;
+}
+#configPanel button:hover { background: #e2e2e2; }
+#configPanel .note { color: #777; font-size: 12px; line-height: 1.6; }
+
+#statusbar {
+  flex: none;
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  height: 24px;
+  padding: 0 8px;
+  line-height: 24px;
+  border-top: 1px solid #d8d8d8;
+  color: #444;
+  white-space: nowrap;
+  overflow: hidden;
+}
+#message { overflow: hidden; text-overflow: ellipsis; }
+#status { flex: none; }

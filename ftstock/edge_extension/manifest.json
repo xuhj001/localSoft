@@ -1,0 +1,33 @@
+{
+  "manifest_version": 3,
+  "name": "富途牛牛 本地自选",
+  "version": "1.0.0",
+  "description": "左侧本地自选 + 右侧个股详情，复用 futunn.com 原始页面；自选列表只存在本机。",
+  "icons": {
+    "16": "icons/icon16.png",
+    "32": "icons/icon32.png",
+    "48": "icons/icon48.png",
+    "128": "icons/icon128.png"
+  },
+  "action": {
+    "default_title": "打开富途牛牛",
+    "default_icon": {
+      "16": "icons/icon16.png",
+      "32": "icons/icon32.png"
+    }
+  },
+  "background": {
+    "service_worker": "background.js"
+  },
+  "permissions": ["storage", "declarativeNetRequest", "cookies", "webRequest"],
+  "host_permissions": ["https://*.futunn.com/*"],
+  "content_scripts": [
+    {
+      "matches": ["https://www.futunn.com/*"],
+      "js": ["page.js"],
+      "run_at": "document_start",
+      "all_frames": true,
+      "world": "MAIN"
+    }
+  ]
+}
