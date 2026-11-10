@@ -1,0 +1,12 @@
+dist/
+build/
+__pycache__/
+*.pyc
+*.pyo
+.venv/
+venv/
+data/
+logs/
+temp/
+assets/webview_storage/
+*.log

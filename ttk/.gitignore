@@ -1,0 +1,19 @@
+# 打包中间产物
+build/
+dist/
+
+# 运行时生成
+logs/
+__pycache__/
+*.pyc
+*.pyo
+
+# 编辑器 / 系统
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# 本地调试配置可保留；若不想入库可取消下一行注释
+# data/config.json
